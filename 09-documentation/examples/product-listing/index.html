@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - E-commerce Store</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-8">
+          <a href="#" class="text-2xl font-bold text-blue-600">Store</a>
+          <div class="hidden md:flex items-center gap-6">
+            <a href="#" class="text-gray-600 hover:text-gray-900">Home</a>
+            <a href="#" class="text-gray-900 font-medium">Products</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900">Categories</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900">About</a>
+          </div>
+        </div>
+
+        <!-- Right side -->
+        <div class="flex items-center gap-4">
+          <button class="p-2 text-gray-600 hover:text-gray-900">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+          <button class="relative p-2 text-gray-600 hover:text-gray-900">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            <span class="absolute -top-1 -right-1 w-5 h-5 bg-blue-600 text-white text-xs rounded-full flex items-center justify-center">3</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900 mb-2">All Products</h1>
+      <p class="text-gray-600">Discover our amazing collection of products</p>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-8">
+      <!-- Filters Sidebar -->
+      <aside class="lg:w-64 flex-shrink-0">
+        <div class="bg-white rounded-lg border border-gray-200 p-6 sticky top-24">
+          <h2 class="text-lg font-bold text-gray-900 mb-4">Filters</h2>
+
+          <!-- Category Filter -->
+          <div class="mb-6">
+            <h3 class="text-sm font-semibold text-gray-900 mb-3">Category</h3>
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                <span class="ml-2 text-sm text-gray-700">Electronics</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                <span class="ml-2 text-sm text-gray-700">Clothing</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                <span class="ml-2 text-sm text-gray-700">Home & Garden</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                <span class="ml-2 text-sm text-gray-700">Sports</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Price Range -->
+          <div class="mb-6">
+            <h3 class="text-sm font-semibold text-gray-900 mb-3">Price Range</h3>
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input type="radio" name="price" class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500">
+                <span class="ml-2 text-sm text-gray-700">Under $50</span>
+              </label>
+              <label class="flex items-center">
+                <input type="radio" name="price" class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500">
+                <span class="ml-2 text-sm text-gray-700">$50 - $100</span>
+              </label>
+              <label class="flex items-center">
+                <input type="radio" name="price" class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500">
+                <span class="ml-2 text-sm text-gray-700">$100 - $200</span>
+              </label>
+              <label class="flex items-center">
+                <input type="radio" name="price" class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500">
+                <span class="ml-2 text-sm text-gray-700">Over $200</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Rating Filter -->
+          <div class="mb-6">
+            <h3 class="text-sm font-semibold text-gray-900 mb-3">Rating</h3>
+            <div class="space-y-2">
+              <label class="flex items-center">
+                <input type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                <span class="ml-2 text-sm text-gray-700">⭐⭐⭐⭐⭐ (5 stars)</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                <span class="ml-2 text-sm text-gray-700">⭐⭐⭐⭐ (4+ stars)</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                <span class="ml-2 text-sm text-gray-700">⭐⭐⭐ (3+ stars)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Clear Filters -->
+          <button class="w-full px-4 py-2 text-sm font-medium text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50">
+            Clear All Filters
+          </button>
+        </div>
+      </aside>
+
+      <!-- Products Grid -->
+      <div class="flex-1">
+        <!-- Toolbar -->
+        <div class="flex items-center justify-between mb-6">
+          <p class="text-sm text-gray-600">Showing <span class="font-medium">1-12</span> of <span class="font-medium">48</span> products</p>
+          <select class="px-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>Sort by: Featured</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest</option>
+            <option>Best Rating</option>
+          </select>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <!-- Product Card 1 -->
+          <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="relative">
+              <img src="https://via.placeholder.com/400x300" alt="Product" class="w-full h-64 object-cover">
+              <span class="absolute top-3 right-3 px-2 py-1 bg-red-500 text-white text-xs font-bold rounded">-20%</span>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-gray-900 mb-1">Premium Wireless Headphones</h3>
+              <p class="text-sm text-gray-600 mb-2">High-quality sound with noise cancellation</p>
+              <div class="flex items-center gap-1 mb-2">
+                <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                <span class="text-sm text-gray-600">(128)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-lg font-bold text-gray-900">$79.99</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">$99.99</span>
+                </div>
+                <button class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="relative">
+              <img src="https://via.placeholder.com/400x300" alt="Product" class="w-full h-64 object-cover">
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-gray-900 mb-1">Smart Watch Pro</h3>
+              <p class="text-sm text-gray-600 mb-2">Track your fitness and stay connected</p>
+              <div class="flex items-center gap-1 mb-2">
+                <span class="text-yellow-400">⭐⭐⭐⭐</span>
+                <span class="text-sm text-gray-600">(89)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-bold text-gray-900">$199.99</span>
+                <button class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="relative">
+              <img src="https://via.placeholder.com/400x300" alt="Product" class="w-full h-64 object-cover">
+              <span class="absolute top-3 right-3 px-2 py-1 bg-green-500 text-white text-xs font-bold rounded">NEW</span>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-gray-900 mb-1">Laptop Backpack</h3>
+              <p class="text-sm text-gray-600 mb-2">Durable and spacious for daily use</p>
+              <div class="flex items-center gap-1 mb-2">
+                <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                <span class="text-sm text-gray-600">(256)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-bold text-gray-900">$49.99</span>
+                <button class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="relative">
+              <img src="https://via.placeholder.com/400x300" alt="Product" class="w-full h-64 object-cover">
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-gray-900 mb-1">Bluetooth Speaker</h3>
+              <p class="text-sm text-gray-600 mb-2">Portable with amazing sound quality</p>
+              <div class="flex items-center gap-1 mb-2">
+                <span class="text-yellow-400">⭐⭐⭐⭐</span>
+                <span class="text-sm text-gray-600">(167)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-bold text-gray-900">$59.99</span>
+                <button class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 5 -->
+          <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="relative">
+              <img src="https://via.placeholder.com/400x300" alt="Product" class="w-full h-64 object-cover">
+              <span class="absolute top-3 right-3 px-2 py-1 bg-red-500 text-white text-xs font-bold rounded">-15%</span>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-gray-900 mb-1">Wireless Mouse</h3>
+              <p class="text-sm text-gray-600 mb-2">Ergonomic design for comfort</p>
+              <div class="flex items-center gap-1 mb-2">
+                <span class="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                <span class="text-sm text-gray-600">(342)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <span class="text-lg font-bold text-gray-900">$25.49</span>
+                  <span class="text-sm text-gray-500 line-through ml-2">$29.99</span>
+                </div>
+                <button class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 6 -->
+          <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+            <div class="relative">
+              <img src="https://via.placeholder.com/400x300" alt="Product" class="w-full h-64 object-cover">
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold text-gray-900 mb-1">USB-C Hub</h3>
+              <p class="text-sm text-gray-600 mb-2">7-in-1 multiport adapter</p>
+              <div class="flex items-center gap-1 mb-2">
+                <span class="text-yellow-400">⭐⭐⭐⭐</span>
+                <span class="text-sm text-gray-600">(94)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-lg font-bold text-gray-900">$39.99</span>
+                <button class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex items-center justify-center gap-2">
+          <button class="px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 disabled:opacity-50" disabled>
+            Previous
+          </button>
+          <button class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium">1</button>
+          <button class="px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50">2</button>
+          <button class="px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50">3</button>
+          <button class="px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50">4</button>
+          <button class="px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50">
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-lg font-bold mb-4">Store</h3>
+          <p class="text-gray-400 text-sm">Your trusted online shopping destination</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Shop</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#" class="hover:text-white">All Products</a></li>
+            <li><a href="#" class="hover:text-white">Categories</a></li>
+            <li><a href="#" class="hover:text-white">Deals</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Support</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#" class="hover:text-white">Contact Us</a></li>
+            <li><a href="#" class="hover:text-white">FAQs</a></li>
+            <li><a href="#" class="hover:text-white">Shipping</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Legal</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+        <p>&copy; 2026 Store. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
